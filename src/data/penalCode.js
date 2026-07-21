@@ -1,0 +1,1 @@
+export { penalCode } from '../penalCode'

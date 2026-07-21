@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@theme { --font-display: 'Barlow Condensed', sans-serif; --font-sans: 'Manrope', sans-serif; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; } body { margin: 0; background: #060913; color: #f3f8ff; font-family: var(--font-sans); } .heading { font-family: var(--font-display); font-weight: 700; line-height: .86; letter-spacing: -.02em; text-transform: uppercase; } .heading em { color: #2a8cff; font-style: italic; } .eyebrow { margin: 0 0 18px; color: #76c1ff; font-size: 10px; font-weight: 800; letter-spacing: .2em; } .eyebrow::before { content: ''; display: inline-block; width: 22px; height: 1px; margin: 0 9px 3px 0; background: #76c1ff; } .text-link { display: inline-flex; align-items: center; gap: 7px; color: #e6f2ff; font-size: 10px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; transition: color .2s; } .text-link:hover { color: #76c1ff; }
+
+/* Documentation — intentionally scoped to the layout that immediately follows its header. */
+header + div > aside { border: 1px solid rgba(180, 215, 255, .14) !important; padding: 0 !important; background: linear-gradient(145deg, rgba(16, 31, 57, .94), rgba(7, 13, 27, .94)); box-shadow: 0 24px 70px rgba(0, 0, 0, .2); overflow: hidden; }
+header + div > aside > p { margin: 0 !important; padding: 22px 22px 12px; color: #7bc4ff !important; font-size: 10px !important; letter-spacing: .18em !important; }
+header + div > aside > p::before { content: 'CENTRAL DE AJUDA'; display: block; margin-bottom: 7px; color: #8193ae; font-size: 8px; letter-spacing: .16em; }
+header + div > aside > div:first-of-type { display: block !important; padding: 0 11px 18px; }
+header + div > aside > div:first-of-type a { display: flex !important; align-items: center; min-height: 43px; margin: 3px 0; padding: 10px 12px !important; border: 1px solid transparent !important; border-left: 3px solid transparent !important; color: #b6c7df !important; font-size: 13px !important; transition: .2s; }
+header + div > aside > div:first-of-type a::after { content: '›'; margin-left: auto; color: #7fc7ff; font-size: 19px; line-height: 1; opacity: 0; transform: translateX(-5px); transition: .2s; }
+header + div > aside > div:first-of-type a:first-child { border-color: rgba(82, 166, 255, .28) !important; border-left-color: #2a8cff !important; background: linear-gradient(90deg, rgba(42, 140, 255, .22), rgba(42, 140, 255, .03)) !important; color: white !important; }
+header + div > aside > div:first-of-type a:first-child::after, header + div > aside > div:first-of-type a:hover::after { opacity: 1; transform: translateX(0); }
+header + div > aside > div:first-of-type a:hover { border-color: rgba(82, 166, 255, .2) !important; background: rgba(42, 140, 255, .08) !important; color: white !important; }
+header + div > aside > div:last-child { margin: 0 11px 11px !important; padding: 17px 12px !important; border-top: 1px solid rgba(180, 215, 255, .13) !important; background: rgba(3, 9, 21, .28); }
+header + div > aside > div:last-child span { color: #8395af !important; font-size: 10px !important; } header + div > aside > div:last-child a { color: #78c3ff !important; font-size: 11px !important; font-weight: 800; }
+header + div > main > .eyebrow + h1 { letter-spacing: -.03em; } header + div > main > p:not(.eyebrow) { max-width: 680px !important; font-size: 16px !important; line-height: 1.9 !important; color: #b6c6da !important; }
+header + div > main > div:nth-of-type(1) { gap: 14px !important; margin-top: 50px !important; } header + div > main > div:nth-of-type(1) > a { min-height: 235px !important; padding: 25px !important; border-color: rgba(180, 215, 255, .14) !important; } header + div > main > div:nth-of-type(1) > a:hover { box-shadow: 0 18px 38px rgba(0, 57, 130, .22); } header + div > main > div:nth-of-type(1) h2 { margin-top: 44px !important; font-size: 35px !important; } header + div > main > div:nth-of-type(1) p { font-size: 12px !important; line-height: 1.7 !important; }
+header + div > main section { padding-top: 118px !important; } header + div > main section h2 { margin-bottom: 29px !important; font-size: clamp(50px, 5.4vw, 70px) !important; } header + div > main article { display: flex; gap: 22px; padding: 21px 0 !important; } header + div > main article b { font-size: 14px !important; } header + div > main article p, header + div > main section > p { font-size: 14px !important; line-height: 1.85 !important; }
+header + div > main article b::first-letter { color: #7bc4ff; } header + div > main section > div { padding: 19px 8px !important; font-size: 13px !important; } header + div > main section > div code { font-size: 14px !important; } header + div > main details { padding: 20px 0 !important; } header + div > main summary { font-size: 14px !important; } header + div > main details p { font-size: 13px !important; line-height: 1.8 !important; }
+@media (max-width: 1023px) { header + div > aside { position: static !important; display: block !important; } } @media (max-width: 640px) { header + div > aside > div:first-of-type { display: grid !important; grid-template-columns: 1fr 1fr; } header + div > aside > div:first-of-type a { font-size: 11px !important; } header + div > main > div:nth-of-type(1) { grid-template-columns: 1fr !important; } header + div > main > div:nth-of-type(1) > a { min-height: 175px !important; } header + div > main > div:nth-of-type(1) h2 { margin-top: 20px !important; } }
+
+/* Sidebar state follows the current documentation anchor. */
+body:has(#regras:target) header + div > aside > div:first-of-type a:first-child,
+body:has(#comandos:target) header + div > aside > div:first-of-type a:first-child,
+body:has(#roleplay:target) header + div > aside > div:first-of-type a:first-child,
+body:has(#punicoes:target) header + div > aside > div:first-of-type a:first-child,
+body:has(#faq:target) header + div > aside > div:first-of-type a:first-child { border-color: transparent !important; border-left-color: transparent !important; background: transparent !important; color: #b6c7df !important; }
+body:has(#regras:target) header + div > aside a[href="#regras"],
+body:has(#comandos:target) header + div > aside a[href="#comandos"],
+body:has(#roleplay:target) header + div > aside a[href="#roleplay"],
+body:has(#punicoes:target) header + div > aside a[href="#punicoes"],
+body:has(#faq:target) header + div > aside a[href="#faq"] { border-color: rgba(82, 166, 255, .28) !important; border-left-color: #2a8cff !important; background: linear-gradient(90deg, rgba(42, 140, 255, .22), rgba(42, 140, 255, .03)) !important; color: white !important; animation: doc-nav-pulse .42s ease both; }
+body:has(#regras:target) header + div > aside a[href="#regras"]::after,
+body:has(#comandos:target) header + div > aside a[href="#comandos"]::after,
+body:has(#roleplay:target) header + div > aside a[href="#roleplay"]::after,
+body:has(#punicoes:target) header + div > aside a[href="#punicoes"]::after,
+body:has(#faq:target) header + div > aside a[href="#faq"]::after { opacity: 1; transform: translateX(0); }
+
+header + div > aside { animation: doc-side-in .55s cubic-bezier(.2,.8,.2,1) both; }
+header + div > main > .eyebrow, header + div > main > h1, header + div > main > p, header + div > main > div:first-of-type { animation: doc-content-in .6s cubic-bezier(.2,.8,.2,1) both; }
+header + div > main > h1 { animation-delay: .06s; } header + div > main > p { animation-delay: .12s; } header + div > main > div:first-of-type { animation-delay: .18s; }
+header + div > main section { animation: doc-section-in .6s ease both; animation-timeline: view(); animation-range: entry 8% cover 30%; }
+@keyframes doc-side-in { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes doc-content-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes doc-section-in { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes doc-nav-pulse { 0% { transform: translateX(-6px); filter: brightness(1.35); } 100% { transform: translateX(0); filter: brightness(1); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+
+/* Vanilão visual assets supplied by the server team. */
+main > section:first-child { background-image: linear-gradient(90deg, rgba(2, 6, 18, .9), rgba(2, 6, 18, .34) 68%), linear-gradient(0deg, rgba(4, 7, 15, .96), transparent 37%), url('/assets/vanilao-patch.png') !important; background-position: center, center, center !important; background-size: cover !important; }
+header + div > main > h1 + p { font-size: 0 !important; } header + div > main > h1 + p::after { content: 'Tudo o que você precisa para começar sua história no Vanilão Roleplay. Escolha uma categoria no menu ou comece pelo Código Penal.'; color: #b6c6da; font-size: 16px; line-height: 1.9; }
+
+/* Shared motion language for landing-page sections. */
+main > section a, main > section button { transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, color .22s ease; }
+
+/* Make the onboarding cards feel like real, clickable actions. */
+#como-jogar { display: flex; flex-direction: column; }
+#como-jogar > section { order: 3; margin-top: 56px; }
+#como-jogar article { overflow: hidden; isolation: isolate; cursor: default; transition: transform .32s cubic-bezier(.2,.8,.2,1), border-color .32s ease, box-shadow .32s ease, background .32s ease; }
+#como-jogar article::before { position: absolute; z-index: -1; inset: 0; content: ''; background: radial-gradient(circle at 15% 10%, rgba(60,158,255,.28), transparent 40%); opacity: 0; transition: opacity .35s ease; }
+#como-jogar article::after { position: absolute; right: 24px; bottom: 23px; content: '↗'; color: #75c3ff; font-size: 23px; opacity: 0; transform: translate(-7px,7px); transition: opacity .25s ease, transform .25s ease; }
+#como-jogar article:hover { z-index: 2; border-color: rgba(94,181,255,.72); background: linear-gradient(145deg,#13284b,#0b1425); box-shadow: 0 18px 42px rgba(2,66,150,.32), inset 0 0 0 1px rgba(130,202,255,.12); transform: translateY(-9px) scale(1.018) !important; }
+#como-jogar article:hover::before { opacity: 1; } #como-jogar article:hover::after { opacity: 1; transform: translate(0,0); }
+#como-jogar article:hover > div { animation: step-icon-pop .42s cubic-bezier(.2,.8,.2,1) both; } #como-jogar article:hover h3 { color: #fff; }
+#como-jogar article a { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(89,178,255,.34); background: rgba(42,140,255,.09); padding: 9px 11px; color: #76c2ff !important; letter-spacing: .06em; transition: background .22s ease, border-color .22s ease, transform .22s ease; }
+#como-jogar article a:hover { border-color: #6fc0ff; background: #2587f5; color: white !important; transform: translateX(4px); }
+#como-jogar article button { position: relative; z-index: 3; transition: background .2s ease, transform .2s ease; } #como-jogar article button:hover { background: #2587f5; transform: translateX(4px); }
+@keyframes step-icon-pop { 0% { transform: scale(1); } 55% { transform: scale(1.28) rotate(-7deg); } 100% { transform: scale(1.08); } }
